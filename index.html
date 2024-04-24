@@ -3,9 +3,10 @@
     <head>
         <meta charset = "UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Jonnathan Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/5a9975a645.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="header">
@@ -33,9 +34,9 @@
                         <img src="images/portfolio_headshot.jpeg">
                     </div>
                     <div class="about-col-2">
-                        <h1 clas = "subtitle">About me</h1>
+                        <h1 class= "sub-title">About me</h1>
                         <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                             <p class="tab-links" onclick="opentab('experience')">Experience</p>
                             <p class="tab-links" onclick="opentab('education')">Education</p>
                         </div>
@@ -47,16 +48,75 @@
                         </div>
                         <div class="tab-contents" id="experience">
                             <ul>
-                                <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                                <li><span>Web Development</span><br>Web App Development</li>
+                                <li><span>Career launch</span><br>to be filled out</li>
+                                <li><span>Computational Research Assistant</span><br>to be filled out</li>
                             </ul>
                         </div>
                         <div class="tab-contents" id ="education">
                             <ul>
-                                <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                                <li><span>Web Development</span><br>Web App Development</li>
+                                <li><span>CUNY Queens College</span><br>2020 - 2025</li>
+                                <li><span>CodePath: Internship Connection Program</span><br>Summer 2024</li>
+                                <li><span>CodePath: Technical Interview Prep</span><br>Summer 2024</li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--------------portfolio---------------------->
+        <div id = "portfolio">
+            <div class = "container">
+                <h1 class = "sub-title">My Work</h1>
+                <div class = "work-list">
+                        <div class = "work">
+                            <img src = "image/sentiment_analysis.png">
+                            <div class = "layer">
+                                <h3>Sentiment Analysis AI Model</h3>
+                                <p>Implemented a logistic regression ML model to perform
+                                <br> binary sentiment classification on movie reviews</p>
+                                <a href="#"><i class="fa-solid fa-paperclip"></i></a>
+                            </div>
+                        </div>
+                        <div class = "work">
+                            <img src = "images/floor_store_android_application.png">
+                            <div class = "layer">
+                                <h3>Floor Store Android App</h3>
+                                <p>Collaborated with a team under a Waterfall Development
+                                <br>model with SqlLite to develop a Floor Store Application</p>
+                                <a href="#"><i class="fa-solid fa-paperclip"></i></a>
+                            </div>
+                        </div>
+                        <div class = "work">
+                            <img src = "image/serial_dilution.png">
+                            <div class = "layer">
+                                <h3>MicroBiology Serial Dilution Automation</h3>
+                                <p>Utilizing water handling robot and Opentron API created 
+                                <br>an automation in python to serial dilute large quantites of medium</p>
+                                <a href="#"><i class="fa-solid fa-paperclip"></i></a>
+                            </div>
+                        </div>
+                </div>
+                <a href = "#" class = "btn"> See More</a>
+            </div>
+        </div>
+        <!-- -----------------contact---------------------->
+        <div id = "contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class = "sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-envelope"></i>jonnjstart@gmail.com</p>
+                        <div class = "social-icons">
+                            <a href="https://www.linkedin.com/in/jonnathan-saavedra-a47a98188/" target = "_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type = "text" name="Name" placeholder = "Your Name" required>
+                            <input type = "email" name = "email" placeholder = "your email" required>
+                            <textarea name= "Message" rows = "6" placeholder= "Your Message"></textarea>
+                            <button type = "submit">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -66,7 +126,7 @@
             var tablinks = document.getElementsByClassName("tab-links");
             var tabcontents = document.getElementsByClassName("tab-contents");
 
-            function opentab(tabname)
+            function opentab(tabname){
                 for(tablink of tablinks){
                     tablink.classList.remove("active-link");
                 }  
@@ -74,7 +134,8 @@
                     tabcontent.classList.remove("active-tab");
                 }
                 event.currentTarget.classList.add("active-link");
-                document.getElementById(tabname).classList.add('active-tab')
+                document.getElementById(tabname).classList.add('active-tab');
+            }
         </script>
     </body>
 </html>
