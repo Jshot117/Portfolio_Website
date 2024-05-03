@@ -9,5 +9,5 @@
 - list hobbies
 
 ## purpose
-This portfolio website is a recreational project to reinforce my html and css skills
+This portfolio website is a recreational project to reinforce my HTML, CSS and JavaScript skills
 
